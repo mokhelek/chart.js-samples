@@ -90,3 +90,51 @@ const pieData = {
   const pieElem = document.getElementById('pie-chart').getContext('2d');
   const pieChart = new Chart(pieElem, pieConfig);
   
+
+// ********************** Line Graph ***********************
+
+
+// Sample data for the line graph for a whole year
+const priceData = {
+    labels: [
+      'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+    ],
+    datasets: [
+      {
+        label: 'Stock Price (USD)',
+        data: [
+          50, 25, 30, 32, 58, 46, 70, 68, 43, 75, 65, 67 // Sample stock price over 12 months
+        ],
+        borderColor: 'purple', // Line color
+        fill: true,
+      },
+    ],
+  };
+  
+  const priceConfig = {
+    type: 'line',
+    data: priceData,
+    options: {
+      scales: {
+        x: {
+          beginAtZero: true,
+          title: {
+            display: true,
+            text: 'Months',
+          },
+        },
+        y: {
+          beginAtZero: true,
+          title: {
+            display: true,
+            text: 'Stock Price (USD)',
+          },
+        },
+      },
+    },
+  };
+  
+  // Assuming you have a canvas element with an id "stock-price-chart" in your HTML.
+  const priceElem = document.getElementById('price-chart').getContext('2d');
+  const priceChart = new Chart(priceElem, priceConfig);
+  
