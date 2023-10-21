@@ -58,7 +58,35 @@ const config = {
         },
     },
 };
-
 // Assuming you have a canvas element with an id "population-chart" in your HTML.
 const populationStats = document.getElementById("population").getContext("2d");
 const initChart = new Chart(populationStats, config);
+// ******************* PIE CHART ********************
+
+// Sample data for the pie chart
+const pieData = {
+    labels: ['Housing', 'Transportation', 'Food', 'Utilities', 'Entertainment', 'Savings', 'Other'],
+    datasets: [
+      {
+        data: [1200, 300, 400, 200, 150, 500, 250], // Sample quantities for each fruit
+        backgroundColor: ['red', 'yellow', 'orange', 'purple', 'pink','lightblue','green'], // Colors for each slice
+      },
+    ],
+  };
+  
+  const pieConfig = {
+    type: 'pie',
+    data: pieData,
+    options: {
+      plugins: {
+        legend: {
+          position: 'left', // Adjust legend position
+        },
+      },
+    },
+  };
+  
+  // Assuming you have a canvas element with an id "fruit-chart" in your HTML.
+  const pieElem = document.getElementById('pie-chart').getContext('2d');
+  const pieChart = new Chart(pieElem, pieConfig);
+  
