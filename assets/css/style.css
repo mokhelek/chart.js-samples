@@ -1,7 +1,35 @@
+@font-face {
+    font-family: "Electro";
+    src: url("ElectroHolic-z8z8G.ttf") ;
+}
+
+.title{
+    font-family: "Electro";
+    font-size: 5rem;
+    color: #a86af8;
+}
+
 .col-6{
     margin-bottom: 1rem;
 }
 
 .card{
-    height: 23rem;
+    height: 21rem;
+    background-color: #73718081;
+    border: 1px #e595fd96 solid;
+    border-radius: 20px;
 }
+
+body{
+    background-color: #414141;
+}
+span{
+    color:#e595fd;
+}
+
+
+/* Change the color of the dataset label */
+#price-chart + div .chartjs-legend-text {
+    color: red !important;
+  }
+  
