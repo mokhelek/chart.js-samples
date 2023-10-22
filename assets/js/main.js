@@ -67,11 +67,11 @@ const initChart = new Chart(populationStats, config);
 
 // Sample data for the pie chart
 const pieData = {
-    labels: ["Housing", "Transportation", "Food", "Utilities", "Entertainment", "Savings", "Other"],
+    labels: ["Housing", "Transportation", "Food", "Utilities", "Other"],
     datasets: [
         {
-            data: [1200, 300, 400, 200, 150, 500, 250], // Sample quantities for each fruit
-            backgroundColor: ["red", "yellow", "orange", "purple", "pink", "lightblue", "green"], // Colors for each slice
+            data: [800, 300, 150, 500, 250], // Sample quantities for each fruit
+            backgroundColor: ["yellow", "purple", "pink", "lightblue", "green"], // Colors for each slice
         },
     ],
 };
@@ -101,7 +101,7 @@ const priceData = {
         {
             label: "Stock Price (USD)",
             data: [50, 25, 30, 32, 58, 46, 70, 68, 43, 75, 65, 67],
-            borderColor: "#e595fd",
+            borderColor: "#88d9ffd2",
             fill: true,
             title: {
                 display: true,
